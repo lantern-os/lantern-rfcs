@@ -51,3 +51,7 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0001](./0001-rust-as-primary-language.md) | Rust is the primary implementation language | Accepted |
 | [0002](./0002-riscv-target-isa.md) | RISC-V is the long-term target ISA | Accepted |
 | [0003](./0003-wasm-as-portable-app-abi.md) | WebAssembly is the portable application ABI | Accepted |
+| [0004](./0004-kernel-responsibilities-and-tcb-boundary.md) | Kernel responsibility list and the TCB boundary | Accepted |
+| [0005](./0005-object-capabilities-as-universal-authority-model.md) | Object capabilities as the universal authority model | Accepted |
+| [0006](./0006-three-layer-capability-structure.md) | Three-layer capability structure — kernel / service / sealed | Accepted |
+| [0007](./0007-phase-0-complete-phase-1-opened.md) | Phase 0 complete; Phase 1 (microkernel prototype) opened | Accepted |

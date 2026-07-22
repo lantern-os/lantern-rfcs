@@ -75,8 +75,9 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | # | Title | Status |
 | --- | --- | --- |
 | [0001](./rfcs/0001-rfc-process.md) | The RFC and ADR process | Active |
-| [0002](./rfcs/0002-microkernel-architecture.md) | Microkernel architecture and TCB boundary | Proposed |
-| [0003](./rfcs/0003-capability-model.md) | The LanternOS capability model | Proposed |
+| [0002](./rfcs/0002-microkernel-architecture.md) | Microkernel architecture and TCB boundary | Accepted |
+| [0003](./rfcs/0003-capability-model.md) | The LanternOS capability model | Accepted |
+| [0004](./rfcs/0004-phase-0-to-phase-1-transition.md) | Closing Phase 0 and opening Phase 1 | Accepted |
 
 ## Index of ADRs
 
@@ -85,5 +86,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0001](./adr/0001-rust-as-primary-language.md) | Rust is the primary implementation language | Accepted |
 | [0002](./adr/0002-riscv-target-isa.md) | RISC-V is the long-term target ISA | Accepted |
 | [0003](./adr/0003-wasm-as-portable-app-abi.md) | WebAssembly is the portable application ABI | Accepted |
+| [0004](./adr/0004-kernel-responsibilities-and-tcb-boundary.md) | Kernel responsibility list and the TCB boundary | Accepted |
+| [0005](./adr/0005-object-capabilities-as-universal-authority-model.md) | Object capabilities as the universal authority model | Accepted |
+| [0006](./adr/0006-three-layer-capability-structure.md) | Three-layer capability structure — kernel / service / sealed | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.

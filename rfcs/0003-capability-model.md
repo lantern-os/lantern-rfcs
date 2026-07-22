@@ -1,12 +1,12 @@
 ---
 rfc: 0003
 title: The LanternOS capability model
-status: Proposed
+status: Accepted
 authors: ["LanternOS founding stewards"]
 stewards: ["capabilities", "kernel"]
 domains: ["capabilities", "kernel", "runtime", "sdk"]
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-07-22
 supersedes: []
 superseded_by: null
 tracking_issue: null
@@ -150,6 +150,7 @@ Composition"), macaroons (attenuable bearer tokens), Fuchsia handles.
 
 ## Resulting ADRs
 
-On acceptance: an ADR fixing object capabilities (no ambient authority) as the universal
-authority model, and an ADR defining the three-layer (kernel / service / sealed)
-structure.
+[ADR-0005](../adr/0005-object-capabilities-as-universal-authority-model.md) fixes object
+capabilities (no ambient authority) as the universal authority model.
+[ADR-0006](../adr/0006-three-layer-capability-structure.md) defines the three-layer
+(kernel / service / sealed) structure.

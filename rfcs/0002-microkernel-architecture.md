@@ -1,12 +1,12 @@
 ---
 rfc: 0002
 title: Microkernel architecture and the TCB boundary
-status: Proposed
+status: Accepted
 authors: ["LanternOS founding stewards"]
 stewards: ["kernel", "capabilities"]
 domains: ["kernel", "capabilities", "hal"]
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-07-22
 supersedes: []
 superseded_by: null
 tracking_issue: null
@@ -141,5 +141,6 @@ seL4 (verified microkernel, capability model), L4 family (IPC performance), Fuch
 
 ## Resulting ADRs
 
-On acceptance: an ADR fixing the kernel responsibility list and the TCB boundary, and an
-ADR selecting the scheduling-context model once Q1 above is resolved.
+[ADR-0004](../adr/0004-kernel-responsibilities-and-tcb-boundary.md) fixes the kernel
+responsibility list and the TCB boundary. The scheduling-context model ADR is deferred
+until the corresponding unresolved question above is settled.
