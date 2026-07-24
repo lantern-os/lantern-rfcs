@@ -5,7 +5,7 @@
 
 If you are new to LanternOS, **this is the most important repository to understand**. It
 encodes how the project thinks, decides, and remembers. The architecture documents in
-[`lantern-docs`](https://github.com/lantern-os/lantern-docs) describe the *current* design; the RFCs and ADRs here
+[`lantern-docs`](../lantern-docs) describe the *current* design; the RFCs and ADRs here
 describe *how and why* that design came to be, and how it is allowed to change.
 
 ## Two instruments, two jobs
@@ -21,7 +21,7 @@ captured directly as an ADR.
 
 ## When is an RFC required?
 
-See [`GOVERNANCE.md`](https://github.com/lantern-os/.github/blob/main/GOVERNANCE.md) for the authoritative list. In short, an RFC is
+See [`GOVERNANCE.md`](../GOVERNANCE.md) for the authoritative list. In short, an RFC is
 required for anything that is **hard to reverse** or **affects a trust boundary**:
 
 - New or changed public interfaces: syscalls, capability types, IPC/wire formats, SDK APIs.
@@ -78,6 +78,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0002](./rfcs/0002-microkernel-architecture.md) | Microkernel architecture and TCB boundary | Accepted |
 | [0003](./rfcs/0003-capability-model.md) | The LanternOS capability model | Accepted |
 | [0004](./rfcs/0004-phase-0-to-phase-1-transition.md) | Closing Phase 0 and opening Phase 1 | Accepted |
+| [0005](./rfcs/0005-syscall-ipc-abi-and-phase1-scheduling.md) | Kernel syscall/IPC ABI and the Phase 1 scheduling-context model | Accepted |
 
 ## Index of ADRs
 
@@ -89,5 +90,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0004](./adr/0004-kernel-responsibilities-and-tcb-boundary.md) | Kernel responsibility list and the TCB boundary | Accepted |
 | [0005](./adr/0005-object-capabilities-as-universal-authority-model.md) | Object capabilities as the universal authority model | Accepted |
 | [0006](./adr/0006-three-layer-capability-structure.md) | Three-layer capability structure — kernel / service / sealed | Accepted |
+| [0007](./adr/0007-phase-0-complete-phase-1-opened.md) | Phase 0 complete; Phase 1 (microkernel prototype) opened | Accepted |
+| [0008](./adr/0008-kernel-syscall-ipc-abi.md) | Kernel syscall/IPC ABI — capability invocation, message registers, IPC buffer | Accepted |
+| [0009](./adr/0009-phase1-scheduling-context-model.md) | Phase 1 scheduling-context model — MCS-shaped object, simplified semantics | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.
