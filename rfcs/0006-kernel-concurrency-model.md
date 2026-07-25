@@ -1,12 +1,12 @@
 ---
 rfc: 0006
 title: Kernel concurrency model — single-stack, run-to-completion for Phase 1
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["kernel"]
 domains: ["kernel", "hal"]
 created: 2026-07-25
-updated: 2026-07-25
+updated: 2026-07-26
 supersedes: []
 superseded_by: null
 tracking_issue: null
@@ -244,6 +244,5 @@ place (see RFC-0002, "Alternatives considered").
 
 ## Resulting ADRs
 
-None yet — this RFC is currently a Draft. On acceptance, expect a single ADR fixing the
-single-stack/run-to-completion decision (and, if warranted, a short note on the
-preemption-point principle), analogous to how RFC-0005 produced ADR-0008/ADR-0009.
+[ADR-0010](../adr/0010-kernel-concurrency-model.md) fixes the single-stack,
+run-to-completion decision, including the preemption-point principle.

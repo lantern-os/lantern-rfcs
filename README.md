@@ -79,7 +79,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0003](./rfcs/0003-capability-model.md) | The LanternOS capability model | Accepted |
 | [0004](./rfcs/0004-phase-0-to-phase-1-transition.md) | Closing Phase 0 and opening Phase 1 | Accepted |
 | [0005](./rfcs/0005-syscall-ipc-abi-and-phase1-scheduling.md) | Kernel syscall/IPC ABI and the Phase 1 scheduling-context model | Accepted |
-| [0006](./rfcs/0006-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion for Phase 1 | Draft |
+| [0006](./rfcs/0006-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion for Phase 1 | Accepted |
 
 ## Index of ADRs
 
@@ -94,5 +94,6 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0007](./adr/0007-phase-0-complete-phase-1-opened.md) | Phase 0 complete; Phase 1 (microkernel prototype) opened | Accepted |
 | [0008](./adr/0008-kernel-syscall-ipc-abi.md) | Kernel syscall/IPC ABI — capability invocation, message registers, IPC buffer | Accepted |
 | [0009](./adr/0009-phase1-scheduling-context-model.md) | Phase 1 scheduling-context model — MCS-shaped object, simplified semantics | Accepted |
+| [0010](./adr/0010-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion (Phase 1) | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.
