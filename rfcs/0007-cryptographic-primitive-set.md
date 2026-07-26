@@ -1,7 +1,7 @@
 ---
 rfc: 0007
 title: Cryptographic primitive set (Phase 1)
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["crypto"]
 domains: ["crypto", "boot", "capabilities"]
@@ -211,6 +211,5 @@ construction yet.
 
 ## Resulting ADRs
 
-None yet — this RFC is currently a Draft. On acceptance, expect a single ADR fixing the
-Phase 1 primitive table and the crypto-agility/PQC-reservation stance, analogous to how
-RFC-0005 produced ADR-0008/ADR-0009 and RFC-0006 produced ADR-0010.
+[ADR-0011](../adr/0011-cryptographic-primitive-set.md) fixes the Phase 1 primitive table
+and the crypto-agility/PQC-reservation stance.

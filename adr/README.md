@@ -58,3 +58,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0008](./0008-kernel-syscall-ipc-abi.md) | Kernel syscall/IPC ABI — capability invocation, message registers, IPC buffer | Accepted |
 | [0009](./0009-phase1-scheduling-context-model.md) | Phase 1 scheduling-context model — MCS-shaped object, simplified semantics | Accepted |
 | [0010](./0010-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion (Phase 1) | Accepted |
+| [0011](./0011-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Accepted |
