@@ -80,6 +80,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0004](./rfcs/0004-phase-0-to-phase-1-transition.md) | Closing Phase 0 and opening Phase 1 | Accepted |
 | [0005](./rfcs/0005-syscall-ipc-abi-and-phase1-scheduling.md) | Kernel syscall/IPC ABI and the Phase 1 scheduling-context model | Accepted |
 | [0006](./rfcs/0006-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion for Phase 1 | Accepted |
+| [0007](./rfcs/0007-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Draft |
 
 ## Index of ADRs
 
