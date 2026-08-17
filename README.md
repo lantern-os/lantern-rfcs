@@ -97,5 +97,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0009](./adr/0009-phase1-scheduling-context-model.md) | Phase 1 scheduling-context model — MCS-shaped object, simplified semantics | Accepted |
 | [0010](./adr/0010-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion (Phase 1) | Accepted |
 | [0011](./adr/0011-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Accepted |
+| [0012](./adr/0012-vspace-frame-capabilities-and-elf-loader.md) | VSpace/Frame capabilities and a minimal ELF loader | Accepted |
+| [0013](./adr/0013-ipc-latency-benchmark.md) | IPC latency benchmark — methodology, Phase 1 target, and a known QEMU-only bug | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.
