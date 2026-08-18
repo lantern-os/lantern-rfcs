@@ -61,3 +61,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0011](./0011-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Accepted |
 | [0012](./0012-vspace-frame-capabilities-and-elf-loader.md) | VSpace/Frame capabilities and a minimal ELF loader | Accepted |
 | [0013](./0013-ipc-latency-benchmark.md) | IPC latency benchmark — methodology, Phase 1 target, and a known QEMU-only bug | Accepted |
+| [0014](./0014-phase-1-complete-phase-2-opened.md) | Phase 1 complete; Phase 2 (capability runtime & first services) opened | Accepted |

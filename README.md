@@ -81,6 +81,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0005](./rfcs/0005-syscall-ipc-abi-and-phase1-scheduling.md) | Kernel syscall/IPC ABI and the Phase 1 scheduling-context model | Accepted |
 | [0006](./rfcs/0006-kernel-concurrency-model.md) | Kernel concurrency model — single-stack, run-to-completion for Phase 1 | Accepted |
 | [0007](./rfcs/0007-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Accepted |
+| [0008](./rfcs/0008-vspace-frame-capabilities-and-elf-loader.md) | VSpace/Frame capabilities and a minimal ELF loader | Accepted |
+| [0009](./rfcs/0009-phase-1-to-phase-2-transition.md) | Closing Phase 1 and opening Phase 2 (capability runtime & first services) | Accepted |
 
 ## Index of ADRs
 
@@ -99,5 +101,6 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0011](./adr/0011-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Accepted |
 | [0012](./adr/0012-vspace-frame-capabilities-and-elf-loader.md) | VSpace/Frame capabilities and a minimal ELF loader | Accepted |
 | [0013](./adr/0013-ipc-latency-benchmark.md) | IPC latency benchmark — methodology, Phase 1 target, and a known QEMU-only bug | Accepted |
+| [0014](./adr/0014-phase-1-complete-phase-2-opened.md) | Phase 1 complete; Phase 2 (capability runtime & first services) opened | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.
