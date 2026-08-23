@@ -83,6 +83,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0007](./rfcs/0007-cryptographic-primitive-set.md) | Cryptographic primitive set (Phase 1) | Accepted |
 | [0008](./rfcs/0008-vspace-frame-capabilities-and-elf-loader.md) | VSpace/Frame capabilities and a minimal ELF loader | Accepted |
 | [0009](./rfcs/0009-phase-1-to-phase-2-transition.md) | Closing Phase 1 and opening Phase 2 (capability runtime & first services) | Accepted |
+| [0010](./rfcs/0010-cross-process-capability-transfer-and-brokering.md) | Cross-process capability transfer and the service-layer capability-brokering API | Draft |
+| [0011](./rfcs/0011-sealed-capability-token-format.md) | Sealed capabilities — a macaroon-style cryptographic token format | Draft |
 
 ## Index of ADRs
 
