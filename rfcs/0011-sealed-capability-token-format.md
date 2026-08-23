@@ -1,7 +1,7 @@
 ---
 rfc: 0011
 title: Sealed capabilities — a macaroon-style cryptographic token format
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["capabilities", "crypto"]
 domains: ["capabilities", "crypto"]
@@ -327,7 +327,7 @@ capability model across a network boundary.
 
 ## Resulting ADRs
 
-On acceptance, an ADR will fix (a) the macaroon-style, BLAKE3-keyed-MAC-chained token
-structure as sealed capabilities' canonical format, and (b) `unseal` success mapping only ever
-onto an ordinary `Broker::mint`/`grant` call as the resolution to RFC-0003's sealed-to-live
-capability mapping question.
+[ADR-0015](../adr/0015-sealed-capability-token-format.md) fixes (a) the macaroon-style,
+BLAKE3-keyed-MAC-chained token structure as sealed capabilities' canonical format, and (b)
+`unseal` success mapping only ever onto an ordinary `Broker::mint`/`grant` call as the
+resolution to RFC-0003's sealed-to-live capability mapping question.
