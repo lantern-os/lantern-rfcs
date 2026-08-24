@@ -1,12 +1,12 @@
 ---
 rfc: 0012
 title: A monotonic clock read primitive for lantern-hal
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["hal", "kernel"]
 domains: ["hal", "kernel", "crypto"]
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-08-24
 supersedes: []
 superseded_by: null
 tracking_issue: null
@@ -209,6 +209,6 @@ read available to less-privileged modes).
 
 ## Resulting ADRs
 
-On acceptance, an ADR will fix `monotonic_time_ns()` as the HAL's canonical read-only clock
-primitive, `riscv64`'s `time`-CSR implementation, and the explicit scoping decision (read-only
-now, timer interrupts deferred as separate future work).
+[ADR-0016](../adr/0016-monotonic-clock-primitive.md) fixes `monotonic_time_ns()` as the HAL's
+canonical read-only clock primitive, `riscv64`'s `time`-CSR implementation, and the explicit
+scoping decision (read-only now, timer interrupts deferred as separate future work).
