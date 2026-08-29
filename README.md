@@ -88,6 +88,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0012](./rfcs/0012-monotonic-clock-primitive.md) | A monotonic clock read primitive for lantern-hal | Accepted |
 | [0013](./rfcs/0013-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
 | [0014](./rfcs/0014-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping for lantern-runtime | Accepted |
+| [0015](./rfcs/0015-capability-manifest-format.md) | The lantern-sdk capability manifest format | Draft |
 
 ## Index of ADRs
 
