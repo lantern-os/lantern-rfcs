@@ -66,3 +66,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0016](./0016-monotonic-clock-primitive.md) | A monotonic clock read primitive for lantern-hal | Accepted |
 | [0017](./0017-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
 | [0018](./0018-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping — resource-scoped vs link-scoped, first two interfaces | Accepted |
+| [0019](./0019-filesystem-wit-interface.md) | Capability-scoped filesystem WIT interface — custom `lantern:host/filesystem`, no paths | Accepted |
