@@ -87,7 +87,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0011](./rfcs/0011-sealed-capability-token-format.md) | Sealed capabilities — a macaroon-style cryptographic token format | Accepted |
 | [0012](./rfcs/0012-monotonic-clock-primitive.md) | A monotonic clock read primitive for lantern-hal | Accepted |
 | [0013](./rfcs/0013-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
-| [0014](./rfcs/0014-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping for lantern-runtime | Draft |
+| [0014](./rfcs/0014-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping for lantern-runtime | Accepted |
 
 ## Index of ADRs
 
@@ -110,5 +110,6 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0015](./adr/0015-sealed-capability-token-format.md) | Sealed capabilities — macaroon-style BLAKE3-keyed-MAC token format | Accepted |
 | [0016](./adr/0016-monotonic-clock-primitive.md) | A monotonic clock read primitive for lantern-hal | Accepted |
 | [0017](./adr/0017-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
+| [0018](./adr/0018-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping — resource-scoped vs link-scoped, first two interfaces | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.

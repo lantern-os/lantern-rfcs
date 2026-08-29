@@ -65,3 +65,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0015](./0015-sealed-capability-token-format.md) | Sealed capabilities — macaroon-style BLAKE3-keyed-MAC token format | Accepted |
 | [0016](./0016-monotonic-clock-primitive.md) | A monotonic clock read primitive for lantern-hal | Accepted |
 | [0017](./0017-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
+| [0018](./0018-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping — resource-scoped vs link-scoped, first two interfaces | Accepted |

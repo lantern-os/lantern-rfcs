@@ -1,16 +1,21 @@
 ---
 rfc: 0014
 title: WIT-handle ⇄ capability mapping for lantern-runtime
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["runtime", "capabilities"]
 domains: ["runtime", "capabilities", "crypto", "filesystem", "sdk"]
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-08-28
 supersedes: []
 superseded_by: null
 tracking_issue: null
 ---
+
+> **Accepted 2026-08-28.** The two mapping shapes, the two worked interfaces, and the
+> `wasi:filesystem` deferral are fixed by
+> [ADR-0018](../adr/0018-wit-handle-capability-mapping.md). First implementation landed in
+> `lantern-runtime` the same round — see `lantern-runtime/STATUS.md`.
 
 # RFC-0014: WIT-handle ⇄ capability mapping for lantern-runtime
 
