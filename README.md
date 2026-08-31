@@ -88,7 +88,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0012](./rfcs/0012-monotonic-clock-primitive.md) | A monotonic clock read primitive for lantern-hal | Accepted |
 | [0013](./rfcs/0013-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
 | [0014](./rfcs/0014-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping for lantern-runtime | Accepted |
-| [0015](./rfcs/0015-capability-manifest-format.md) | The lantern-sdk capability manifest format | Draft |
+| [0015](./rfcs/0015-capability-manifest-format.md) | The lantern-sdk capability manifest format | Accepted |
 | [0016](./rfcs/0016-filesystem-wit-interface.md) | A capability-scoped filesystem WIT interface for lantern-runtime | Accepted |
 
 ## Index of ADRs
@@ -114,5 +114,6 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0017](./adr/0017-wasm-engine-selection-and-aot-strategy.md) | Wasm engine selection and AOT execution strategy for lantern-runtime | Accepted |
 | [0018](./adr/0018-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping — resource-scoped vs link-scoped, first two interfaces | Accepted |
 | [0019](./adr/0019-filesystem-wit-interface.md) | Capability-scoped filesystem WIT interface — custom `lantern:host/filesystem`, no paths | Accepted |
+| [0020](./adr/0020-capability-manifest-format.md) | The lantern-sdk capability manifest format — TOML, abstract roles, combined-digest signing | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.

@@ -1,18 +1,26 @@
 ---
 rfc: 0015
 title: The lantern-sdk capability manifest format
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["sdk", "runtime"]
 domains: ["sdk", "runtime", "capabilities"]
 created: 2026-08-29
-updated: 2026-08-29
+updated: 2026-08-31
 supersedes: []
 superseded_by: null
 tracking_issue: null
 ---
 
 # RFC-0015: The lantern-sdk capability manifest format
+
+> **Accepted 2026-08-31.** The TOML `lantern.capabilities.toml` format, its per-interface
+> schema, the abstract-role model, declaration order as the permanent `open(slot)` index
+> (positional with holes), the manifest as the sole source of the generated WIT `world`,
+> and the combined-digest package binding are fixed by
+> [ADR-0020](../adr/0020-capability-manifest-format.md). `lantern-sdk` v0 (parser,
+> validator, interface registry, WIT-`world` generator, `GrantPlan`/binder, package
+> signing) landed the same round — see `lantern-sdk/STATUS.md`.
 
 ## Summary
 
