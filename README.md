@@ -91,7 +91,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0015](./rfcs/0015-capability-manifest-format.md) | The lantern-sdk capability manifest format | Accepted |
 | [0016](./rfcs/0016-filesystem-wit-interface.md) | A capability-scoped filesystem WIT interface for lantern-runtime | Accepted |
 | [0017](./rfcs/0017-phase-2-to-phase-3-transition.md) | Closing Phase 2 and opening Phase 3 (privacy, identity, networking, and AI) | Accepted |
-| [0018](./rfcs/0018-confined-execution-port.md) | The confined-execution port — services and the runtime as confined processes on the kernel | Draft |
+| [0018](./rfcs/0018-confined-execution-port.md) | The confined-execution port — services and the runtime as confined processes on the kernel | Accepted |
 
 ## Index of ADRs
 
@@ -118,5 +118,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0019](./adr/0019-filesystem-wit-interface.md) | Capability-scoped filesystem WIT interface — custom `lantern:host/filesystem`, no paths | Accepted |
 | [0020](./adr/0020-capability-manifest-format.md) | The lantern-sdk capability manifest format — TOML, abstract roles, combined-digest signing | Accepted |
 | [0021](./adr/0021-phase-2-complete-phase-3-opened.md) | Phase 2 complete; Phase 3 (privacy, identity, networking, and AI) opened | Accepted |
+| [0022](./adr/0022-confined-service-model-and-call-transport.md) | Confined-service model and the badged-endpoint + shared-memory call transport | Accepted |
+| [0023](./adr/0023-wasmtime-no-std-pulley-hosting.md) | Hosting Wasmtime on riscv64 — `no_std` + the Pulley interpreter and the custom-platform contract | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.

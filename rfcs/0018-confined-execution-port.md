@@ -1,7 +1,7 @@
 ---
 rfc: 0018
 title: The confined-execution port — services and the runtime as confined processes on the kernel
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["runtime", "kernel", "capabilities", "crypto", "filesystem", "hal"]
 domains: ["runtime", "kernel", "capabilities", "crypto", "filesystem", "hal", "boot"]
@@ -11,6 +11,16 @@ supersedes: []
 superseded_by: null
 tracking_issue: null
 ---
+
+> **Accepted 2026-09-01.** The three parts are fixed by two ADRs:
+> [ADR-0022](../adr/0022-confined-service-model-and-call-transport.md) (Parts 1–2 — services
+> as confined U-mode programs, the `lantern-abi` substrate, and the badged-endpoint +
+> shared-`Frame` call transport) and
+> [ADR-0023](../adr/0023-wasmtime-no-std-pulley-hosting.md) (Part 3 — Wasmtime `no_std` +
+> the Pulley interpreter and the custom-platform contract). Both record that this work adds
+> nothing to the TCB. The per-service wire protocols, the launch binder / consent UX
+> (`lantern-shell`, per RFC-0015), and native-AOT execution (Phase 4) remain out of scope,
+> as stated below.
 
 # RFC-0018: The confined-execution port — services and the runtime as confined processes on the kernel
 
