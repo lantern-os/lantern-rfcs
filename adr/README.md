@@ -68,3 +68,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0018](./0018-wit-handle-capability-mapping.md) | WIT-handle ⇄ capability mapping — resource-scoped vs link-scoped, first two interfaces | Accepted |
 | [0019](./0019-filesystem-wit-interface.md) | Capability-scoped filesystem WIT interface — custom `lantern:host/filesystem`, no paths | Accepted |
 | [0020](./0020-capability-manifest-format.md) | The lantern-sdk capability manifest format — TOML, abstract roles, combined-digest signing | Accepted |
+| [0021](./0021-phase-2-complete-phase-3-opened.md) | Phase 2 complete; Phase 3 (privacy, identity, networking, and AI) opened | Accepted |

@@ -1,7 +1,7 @@
 ---
 rfc: 0017
 title: Closing Phase 2 and opening Phase 3 (privacy, identity, networking, and AI)
-status: Draft
+status: Accepted
 authors: ["LanternOS founding stewards"]
 stewards: ["governance", "runtime", "sdk", "capabilities", "network", "ai-runtime", "identity"]
 domains: ["governance", "runtime", "sdk", "capabilities", "crypto", "filesystem", "kernel", "network", "ai-runtime", "identity"]
@@ -13,6 +13,11 @@ tracking_issue: null
 ---
 
 # RFC-0017: Closing Phase 2 and opening Phase 3 (privacy, identity, networking, and AI)
+
+> **Accepted 2026-08-31.** Phase 2 is closed and Phase 3 is open;
+> [ADR-0021](../adr/0021-phase-2-complete-phase-3-opened.md) is the durable record of the
+> transition, the exit-criteria evidence, and the carried-forward confined-execution gap
+> that is Phase 3's foundational prerequisite.
 
 ## Summary
 
