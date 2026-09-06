@@ -114,3 +114,17 @@ needed) for v0. Epoch-based interruption driven by a real timer interrupt is a
 - **Open (tracked in `lantern-runtime` `STATUS.md`):** Pulley benchmarking; the
   runtime-process fault-handling policy; `wasmtime_memory_image_*` CoW; epoch preemption
   once `lantern-hal` has a timer interrupt.
+
+## Implementation note (2026-09-06)
+
+Groundwork landed in `lantern-runtime/riscv64-probe/` (Pulley builds, links for `riscv64`,
+runs a component through a LanternOS platform shim). One refinement to the feature list
+above: **`custom-native-signals` is *not* enabled.** With Pulley the interpreter detects
+every trap and returns `Result::Err` — there is no CPU exception to catch — so enabling
+`custom-native-signals` would only add a requirement to provide `wasmtime_init_traps` and a
+signal handler that can never fire. Leaving it off means `has_native_signals` is false in
+Wasmtime's build script and neither `wasmtime_init_traps` nor a handler is linked at all,
+which is strictly simpler than the "no-op registration" this ADR anticipated. The realised
+feature set is `["runtime", "component-model", "pulley", "custom-virtual-memory",
+"custom-sync-primitives"]`. `wasmtime_fiber_*` is likewise absent (`component-model-async`
+off, and `riscv64` has builtin stack-switching so `has_custom_fiber` is false regardless).
