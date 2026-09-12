@@ -71,3 +71,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0021](./0021-phase-2-complete-phase-3-opened.md) | Phase 2 complete; Phase 3 (privacy, identity, networking, and AI) opened | Accepted |
 | [0022](./0022-confined-service-model-and-call-transport.md) | Confined-service model and the badged-endpoint + shared-memory call transport | Accepted |
 | [0023](./0023-wasmtime-no-std-pulley-hosting.md) | Hosting Wasmtime on riscv64 — `no_std` + the Pulley interpreter and the custom-platform contract | Accepted |
+| [0024](./0024-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |

@@ -1,16 +1,26 @@
 ---
 rfc: 0019
 title: The confined-service call protocol — shared-Frame framing, and the keystore and store wire formats
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["runtime", "crypto", "filesystem", "capabilities"]
 domains: ["runtime", "crypto", "filesystem", "capabilities", "abi"]
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-12
 supersedes: []
 superseded_by: null
 tracking_issue: null
 ---
+
+> **Accepted 2026-09-12.** Fixed by
+> [ADR-0024](../adr/0024-confined-service-call-protocol.md): the shared-`Frame` framing
+> (16-byte request/reply header, `mr1` early length gate, 4-status error map, chunking),
+> the `keystore` (SIGN/ENCRYPT/DECRYPT) and `store` (READ/WRITE) wire formats, and the new
+> `lantern_abi::frame` module. Adds nothing to the TCB. The unresolved questions below (a
+> distinct `FAILED` WIT error code, the `store` total-size check, `Frame` size tuning,
+> one-endpoint-per-handle vs. shared, fault signalling) remain open, carried into
+> implementation rather than blocking acceptance — the same posture ADR-0022 took for its
+> own open items.
 
 # RFC-0019: The confined-service call protocol — shared-`Frame` framing, and the keystore and store wire formats
 

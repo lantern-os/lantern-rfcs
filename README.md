@@ -92,7 +92,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0016](./rfcs/0016-filesystem-wit-interface.md) | A capability-scoped filesystem WIT interface for lantern-runtime | Accepted |
 | [0017](./rfcs/0017-phase-2-to-phase-3-transition.md) | Closing Phase 2 and opening Phase 3 (privacy, identity, networking, and AI) | Accepted |
 | [0018](./rfcs/0018-confined-execution-port.md) | The confined-execution port — services and the runtime as confined processes on the kernel | Accepted |
-| [0019](./rfcs/0019-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Draft |
+| [0019](./rfcs/0019-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
 
 ## Index of ADRs
 
@@ -121,5 +121,6 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0021](./adr/0021-phase-2-complete-phase-3-opened.md) | Phase 2 complete; Phase 3 (privacy, identity, networking, and AI) opened | Accepted |
 | [0022](./adr/0022-confined-service-model-and-call-transport.md) | Confined-service model and the badged-endpoint + shared-memory call transport | Accepted |
 | [0023](./adr/0023-wasmtime-no-std-pulley-hosting.md) | Hosting Wasmtime on riscv64 — `no_std` + the Pulley interpreter and the custom-platform contract | Accepted |
+| [0024](./adr/0024-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.
