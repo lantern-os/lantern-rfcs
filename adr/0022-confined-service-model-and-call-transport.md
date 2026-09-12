@@ -178,7 +178,46 @@ key/file with user consent is `lantern-shell`'s job (RFC-0015) and layers on top
   external I/O never reaches "all threads blocked", so v0 is fine, but `lantern-network`'s
   first blocking socket read will need it); delivering CPU faults to a U-mode handler
   (required only before native-AOT execution, [ADR-0023](./0023-wasmtime-no-std-pulley-hosting.md)).
-- **Open (tracked in `lantern-runtime` / `lantern-kernel` `STATUS.md`):** shared-`Frame`
-  sizing/lifecycle; how the launch description is expressed before `lantern-shell` exists;
-  whether the services port and the Wasmtime port proceed as one work item or two, and in
-  which order (Part 3 has no hard dependency on Part 1).
+- **Open (tracked in `lantern-runtime` / `lantern-kernel` `STATUS.md`):** how the launch
+  description is expressed before `lantern-shell` exists; whether the services port and the
+  Wasmtime port proceed as one work item or two, and in which order (Part 3 has no hard
+  dependency on Part 1).
+
+## Implementation note (2026-09-13): Part 2's shared `Frame` — the kernel mechanism
+
+This ADR accepted "one shared `Frame`... mapped read-write into both VSpaces" as policy but
+left the mechanism as an open detail (the "Open" list above, before this note). Realized as
+a small, deliberately narrow widening of `lantern-kernel`'s `Frame` object, **not treated as
+requiring a new RFC**: the trust-boundary decision (a runtime and a service may share one
+page) was already fixed by this ADR; what follows is ordinary engineering implementing it,
+the same posture RFC-0014's pre-authorization let filesystem v0 skip an RFC of its own.
+
+- **`Frame::mapped_at` widened from `Option<(VSpaceId, usize)>` to
+  `[Option<(VSpaceId, usize)>; MAX_FRAME_MAPPINGS]`, `MAX_FRAME_MAPPINGS == 2`** —
+  exactly the runtime-and-one-service case this ADR describes, deliberately not a general
+  N-way sharing primitive (a third or fourth simultaneous mapping is a new decision).
+  `Map` now finds any free slot instead of refusing a second mapping outright.
+- **`FrameInvoke::Unmap` gained an argument**: `mr1` names which VSpace's mapping to
+  remove (mirroring `Map`'s own `mr1`), since "the" mapping is no longer unambiguous.
+  Confirmed no Phase 1/2 caller ever invoked `Unmap` for real (only `lantern-kernel`'s own
+  tests did) before widening it — a clean ABI addition, not a break.
+- **The launcher needs no capability grant for this at all.** `lantern-boot`'s root
+  retains the one `Capability::Frame` throughout and invokes `Map` on it twice — once per
+  target VSpace, both while it still holds full boot-time privilege — rather than granting
+  either loaded program a capability to the Frame. Neither program needs one: this
+  project's memory model requires no capability to *use* an already-mapped page (RFC-0008),
+  only to (un)map it. `lantern-boot/src/launch.rs`'s new `map_shared_frame` is this in one
+  function.
+- **Proven under real QEMU**, not just host unit tests: a third `lantern-boot` demo
+  (`lantern-boot-frame-demo`, `frame-service`/`frame-client`) exercises
+  `lantern_abi::frame::Channel` — RFC-0019's marshalling layer — over a real shared page for
+  the first time. The client sends an 11-byte request, the service performs a real
+  bitwise-NOT over it and replies, and the client independently recomputes the expected
+  result before signalling one of two distinguishable outcomes. 3/3 reproducible runs.
+  This is what unblocks porting `Keystore`/`Store` onto real confined `Recv`-loop programs
+  (the remaining ADR-0022 Part 1 work) — the previous blocker was exactly the absence of
+  this mechanism.
+- **TCB impact: still none newly incurred beyond what this ADR already accepted.** The
+  widened `Frame::mapped_at` and `Unmap` argument are ordinary `lantern-kernel` (TCB) code
+  changes — real, but implementing an already-reviewed decision, not a new one. No new
+  kernel object or syscall.
