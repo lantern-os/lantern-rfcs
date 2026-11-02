@@ -6,7 +6,7 @@ authors: ["TheNewAutonomy"]
 stewards: ["sdk", "runtime"]
 domains: ["sdk", "runtime", "capabilities"]
 created: 2026-08-29
-updated: 2026-08-31
+updated: 2026-11-02
 supersedes: []
 superseded_by: null
 tracking_issue: null
@@ -21,6 +21,13 @@ tracking_issue: null
 > [ADR-0020](../adr/0020-capability-manifest-format.md). `lantern-sdk` v0 (parser,
 > validator, interface registry, WIT-`world` generator, `GrantPlan`/binder, package
 > signing) landed the same round — see `lantern-sdk/STATUS.md`.
+>
+> **Implementation note (2026-11-02):** this RFC's TCB section says `lantern-runtime` gains no
+> dependency and treats the TOML parser as SDK tooling. RFC-0018's confined runtime binary now
+> also links that parser, to choose its host wiring from a verified package's manifest. The
+> `lantern-runtime` library, the TCB and the manifest's role as a request are unchanged, and
+> the launch binder is still unbuilt. See
+> [ADR-0020's note](../adr/0020-capability-manifest-format.md#implementation-note-2026-11-02-a-confined-runtime-reads-the-manifest).
 
 ## Summary
 

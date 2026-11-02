@@ -101,3 +101,39 @@ friction).
   binder and consent UX; role bundles (`[[feature]]`); per-language ergonomics; a
   degraded-mode hint for declinable link-scoped facilities; registry versioning against a
   governed public ABI.
+
+## Implementation note (2026-11-02): a confined runtime reads the manifest
+
+The Consequences above say `lantern-runtime` gains no dependency, and RFC-0015 describes the
+TOML parser as `lantern-sdk` tooling. Both were true when written, and the `lantern-runtime`
+library crate is still unchanged. But RFC-0018's confined runtime binary
+(`lantern-runtime/confined-runtime`) now links `lantern-sdk`'s `manifest` feature, and with it
+`toml` 0.9, so that one binary can choose its host wiring from the package it was handed. **Not
+treated as requiring a new RFC:** it adds nothing to the TCB and moves no trust boundary, and
+this decision's model of the manifest is unchanged.
+
+- **One parser.** The parser, validator, registry and `GrantPlan` now build `no_std` + `alloc`,
+  so the runtime reads a manifest with the same code `lantern-sdk build` validated it with.
+  A second reader could disagree about what a signed manifest says.
+- **Still a request, not authority.** The manifest selects which host wiring the process
+  builds and how many `open(slot)` indices exist. A guest reaches only the capabilities the
+  process holds, enforced by the services that issued them. A manifest asking for more gets
+  nothing more.
+- **Parsed only after the signature verifies.** The runtime exposes the manifest only through
+  the type its package verification returns.
+- **What this adds.** A parser now runs in the process that holds a guest's capabilities, so
+  a parser bug reachable by a signing publisher is confined to that process but has its
+  authority. Unauthenticated bytes can't reach it. Threat R7 in `lantern-runtime/THREAT_MODEL.md`
+  records this.
+
+**This is not the launch binder**, which stays out of scope here and remains `lantern-shell`'s.
+Until it exists, this decision is only partly realized on the confined path:
+
+- `ops` are not yet enforced end to end. The confined demos' grants are fixed by the service
+  rather than minted from the manifest, so a manifest requesting only `decrypt` can still sign.
+- A declared `monotonic-clock` is refused before instantiation, with no consent step. The
+  confined runtime has no clock backend yet, and it stubs unlinked imports as traps, so leaving
+  the interface unlinked would become a trap mid-run rather than RFC-0015's failure to
+  instantiate. The refusal is what preserves that fail-before-running behaviour.
+
+Implemented by `lantern-sdk#2`, `lantern-runtime#3` and `lantern-boot#3`.
