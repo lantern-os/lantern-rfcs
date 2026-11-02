@@ -72,3 +72,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0022](./0022-confined-service-model-and-call-transport.md) | Confined-service model and the badged-endpoint + shared-memory call transport | Accepted |
 | [0023](./0023-wasmtime-no-std-pulley-hosting.md) | Hosting Wasmtime on riscv64 — `no_std` + the Pulley interpreter and the custom-platform contract | Accepted |
 | [0024](./0024-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
+| [0025](./0025-launch-binder.md) | The launch binder v0 — a confined binder as the sole holder of grant-request authority | Accepted |

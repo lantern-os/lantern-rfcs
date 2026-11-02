@@ -93,6 +93,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0017](./rfcs/0017-phase-2-to-phase-3-transition.md) | Closing Phase 2 and opening Phase 3 (privacy, identity, networking, and AI) | Accepted |
 | [0018](./rfcs/0018-confined-execution-port.md) | The confined-execution port — services and the runtime as confined processes on the kernel | Accepted |
 | [0019](./rfcs/0019-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
+| [0020](./rfcs/0020-launch-binder.md) | The launch binder v0 — grants minted from a package's manifest, by a confined binder | Accepted |
 
 ## Index of ADRs
 
@@ -122,5 +123,6 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0022](./adr/0022-confined-service-model-and-call-transport.md) | Confined-service model and the badged-endpoint + shared-memory call transport | Accepted |
 | [0023](./adr/0023-wasmtime-no-std-pulley-hosting.md) | Hosting Wasmtime on riscv64 — `no_std` + the Pulley interpreter and the custom-platform contract | Accepted |
 | [0024](./adr/0024-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
+| [0025](./adr/0025-launch-binder.md) | The launch binder v0 — a confined binder as the sole holder of grant-request authority | Accepted |
 
 See [`adr/README.md`](./adr/README.md) for the ADR conventions.
