@@ -74,3 +74,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0024](./0024-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
 | [0025](./0025-launch-binder.md) | The launch binder v0 — a confined binder as the sole holder of grant-request authority | Accepted |
 | [0026](./0026-grant-ledger-and-revocation.md) | The grant ledger and revocation v0 — service-side revocation through a confined binder | Accepted |
+| [0027](./0027-persistent-revocation-store.md) | The persistent policy store v0 — a narrow-only revocation log on flash, in a confined service | Accepted |
