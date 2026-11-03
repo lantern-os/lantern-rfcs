@@ -95,6 +95,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0019](./rfcs/0019-confined-service-call-protocol.md) | The confined-service call protocol — shared-`Frame` framing, keystore and store wire formats | Accepted |
 | [0020](./rfcs/0020-launch-binder.md) | The launch binder v0 — grants minted from a package's manifest, by a confined binder | Accepted |
 | [0021](./rfcs/0021-grant-ledger-and-revocation.md) | The grant ledger and revocation v0 — a confined binder that can list and withdraw what it granted | Accepted |
+| [0022](./rfcs/0022-persistent-revocation-store.md) | The persistent policy store v0 — revocations that outlive a reboot, on flash, in a confined service | Accepted |
 
 ## Index of ADRs
 
