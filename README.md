@@ -96,6 +96,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0020](./rfcs/0020-launch-binder.md) | The launch binder v0 — grants minted from a package's manifest, by a confined binder | Accepted |
 | [0021](./rfcs/0021-grant-ledger-and-revocation.md) | The grant ledger and revocation v0 — a confined binder that can list and withdraw what it granted | Accepted |
 | [0022](./rfcs/0022-persistent-revocation-store.md) | The persistent policy store v0 — revocations that outlive a reboot, on flash, in a confined service | Accepted |
+| [0023](./rfcs/0023-hardware-key-custody-in-phase-4.md) | Hardware-backed key custody belongs in Phase 4, with a checklist so it isn't lost | Accepted |
+| [0024](./rfcs/0024-audit-log.md) | The audit log v0 — a hash-chained record of the launch binder's decisions | Draft |
 
 ## Index of ADRs
 
