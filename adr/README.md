@@ -77,3 +77,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0027](./0027-persistent-revocation-store.md) | The persistent policy store v0 — a narrow-only revocation log on flash, in a confined service | Accepted |
 | [0028](./0028-hardware-key-custody-in-phase-4.md) | Hardware-backed key custody belongs in Phase 4, with a checklist so it isn't lost | Accepted |
 | [0029](./0029-audit-log.md) | The audit log v0 — a hash-chained record of the launch binder's decisions | Accepted |
+| [0030](./0030-audit-log-service-operations.md) | The audit log v1 — every use of a grant, recorded by the service before it acts | Accepted |

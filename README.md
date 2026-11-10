@@ -98,6 +98,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0022](./rfcs/0022-persistent-revocation-store.md) | The persistent policy store v0 — revocations that outlive a reboot, on flash, in a confined service | Accepted |
 | [0023](./rfcs/0023-hardware-key-custody-in-phase-4.md) | Hardware-backed key custody belongs in Phase 4, with a checklist so it isn't lost | Accepted |
 | [0024](./rfcs/0024-audit-log.md) | The audit log v0 — a hash-chained record of the launch binder's decisions | Accepted |
+| [0025](./rfcs/0025-audit-log-service-operations.md) | The audit log v1 — every use of a grant, recorded by the service before it acts | Accepted |
 
 ## Index of ADRs
 
