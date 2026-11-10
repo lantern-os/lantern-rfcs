@@ -52,4 +52,5 @@ and the code stays in `lantern-shell` until `lantern-ai-runtime` has code.
   the whole chain, or erasing it, by someone who can write the flash. Only a head kept elsewhere reveals a rewrite.
 - **Still not met:** the exit criterion's "faithful audit log". What a guest does with a grant, every `SIGN` and `READ`, isn't
   recorded yet, and neither is `store-service`'s first-caller grant from `keystore-service`. Recording service operations is
-  the next RFC.
+  the next RFC. *(Done by [ADR-0030](./0030-audit-log-service-operations.md), which also replaces "a full log stops all
+  grants" with retention.)*
