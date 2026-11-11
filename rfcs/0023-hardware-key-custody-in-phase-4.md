@@ -57,6 +57,7 @@ done, or explicitly moved by another RFC. Any later RFC that takes on a software
 | Encrypted storage | Software-held key, once persistent | A key bound to the device | System threat T6 |
 | Policy store | Unkeyed log; erasing restores revocations | A keyed log and a monotonic counter | ADR-0027 |
 | Audit log | Tamper-evident only against partial edits (RFC-0024 proposal) | Hardware-held signing and a monotonic counter | RFC-0024 |
+| Remembered decisions | An unkeyed log on flash: someone who can write it can plant an "always" | Keyed, rollback-resistant storage for a person's decisions | RFC-0026 |
 | Audit retention | Retired history is erased on the device; sector headers and `RETIRED` records are unsigned, so a forged retirement verifies | Signed headers and retirements, and retired history exported to device-bound encrypted storage before it's erased | RFC-0025 |
 | Trusted publishers | Demo keys compiled in | A root of trust for what the system trusts | RFC-0020 |
 | Boot | No measured boot | Measured boot and attestation | System threat T7 |
