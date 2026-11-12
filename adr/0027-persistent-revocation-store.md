@@ -66,3 +66,5 @@ would make the store authoritative; failing open on corruption.
 - **Still not met:** the Phase 3 exit criterion's "visible, revocable capability set". No person sees or decides anything,
   since `grant-control` is a test script. This is durable machinery, not a durable user decision, and it must not be
   described as one.
+
+*(Its "narrow-only" property ends in a system with consent: [ADR-0032](./0032-trusted-path-and-consent.md), where a person's remembered "always" can skip a prompt, though never past the ceiling.)*

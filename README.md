@@ -99,6 +99,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0023](./rfcs/0023-hardware-key-custody-in-phase-4.md) | Hardware-backed key custody belongs in Phase 4, with a checklist so it isn't lost | Accepted |
 | [0024](./rfcs/0024-audit-log.md) | The audit log v0 — a hash-chained record of the launch binder's decisions | Accepted |
 | [0025](./rfcs/0025-audit-log-service-operations.md) | The audit log v1 — every use of a grant, recorded by the service before it acts | Accepted |
+| [0026](./rfcs/0026-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
+| [0027](./rfcs/0027-interrupt-delivery-timer-and-idle.md) | Interrupt delivery, a preemption timer and an idle loop — the kernel half of ADR-0004's item 5 | Accepted |
 
 ## Index of ADRs
 

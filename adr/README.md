@@ -78,3 +78,5 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0028](./0028-hardware-key-custody-in-phase-4.md) | Hardware-backed key custody belongs in Phase 4, with a checklist so it isn't lost | Accepted |
 | [0029](./0029-audit-log.md) | The audit log v0 — a hash-chained record of the launch binder's decisions | Accepted |
 | [0030](./0030-audit-log-service-operations.md) | The audit log v1 — every use of a grant, recorded by the service before it acts | Accepted |
+| [0031](./0031-interrupt-delivery-timer-and-idle.md) | Interrupt delivery, a preemption timer and an idle loop | Accepted |
+| [0032](./0032-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
