@@ -80,3 +80,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0030](./0030-audit-log-service-operations.md) | The audit log v1 — every use of a grant, recorded by the service before it acts | Accepted |
 | [0031](./0031-interrupt-delivery-timer-and-idle.md) | Interrupt delivery, a preemption timer and an idle loop | Accepted |
 | [0032](./0032-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
+| [0033](./0033-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock | Accepted |

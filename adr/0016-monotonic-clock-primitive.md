@@ -57,3 +57,5 @@ clock, with no timer-interrupt or scheduler-tick surface added alongside it.**
   `x86-64`'s real implementation (needs TSC calibration), and — tracked in
   `lantern-crypto/STATUS.md` and `lantern-filesystem/STATUS.md`, not here — actually wiring
   this into `Keystore::unseal`'s call sites.
+
+*(User space reads this clock only through a `Deadline` capability, since [ADR-0033](./0033-deadlines-and-a-capability-clock.md).)*

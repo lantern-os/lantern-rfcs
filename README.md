@@ -101,6 +101,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0025](./rfcs/0025-audit-log-service-operations.md) | The audit log v1 — every use of a grant, recorded by the service before it acts | Accepted |
 | [0026](./rfcs/0026-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
 | [0027](./rfcs/0027-interrupt-delivery-timer-and-idle.md) | Interrupt delivery, a preemption timer and an idle loop — the kernel half of ADR-0004's item 5 | Accepted |
+| [0028](./rfcs/0028-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock — user-space timeouts on RFC-0027's timer | Accepted |
 
 ## Index of ADRs
 

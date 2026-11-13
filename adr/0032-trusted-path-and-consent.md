@@ -56,7 +56,8 @@ shell can read or write.**
   this image's one app.
 - **Harder / committed to:**
   - Every unsettled grant waits on a person, and the binder serves nothing else meanwhile. There's no timeout yet; that's the
-    next kernel RFC.
+    next kernel RFC. *(Done by [ADR-0033](./0033-deadlines-and-a-capability-clock.md): a request is declined
+    `NO_CONSENT` after 60 seconds.)*
   - The system image runs one fixed app until a user-space launcher exists.
 - **Trust boundary:** a new one, the console. Nothing enters the ADR-0004 TCB.
 - **Not mitigated, and on [RFC-0023](../rfcs/0023-hardware-key-custody-in-phase-4.md)'s checklist:** someone who can write
