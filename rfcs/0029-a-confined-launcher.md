@@ -1,18 +1,27 @@
 ---
 rfc: 0029
 title: A confined launcher — starting apps from signed packages after boot, at a person's request
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["boot", "kernel", "shell", "ai-runtime"]
 domains: ["kernel", "boot", "shell", "abi", "runtime", "docs"]
 created: 2026-11-13
-updated: 2026-11-13
+updated: 2026-11-14
 supersedes: []
 superseded_by: null
 tracking_issue: null
 ---
 
-> **Direction agreed 2026-11-13; still a Draft until implemented.** Unresolved questions 1 to 3 were settled as proposed:
+> **Accepted 2026-11-14, implemented and recorded in [ADR-0035](../adr/0035-a-confined-launcher.md).** Section 9 records
+> the implementation's design. Section 7's "with reclamation" is what was built, on RFC-0030, so a slot runs any number of
+> apps in turn. Two findings along the way:
+>
+> - Each service's grant table never freed a record, so it would have refused every grant after about 30 runs. Revoked
+>   records are now reused.
+> - The filesystem probe assumed its file was empty on every run. Files outlive a run, so it now accepts what it wrote
+>   last time.
+>
+> **Direction agreed 2026-11-13.** Unresolved questions 1 to 3 were settled as proposed:
 > **reclamation comes first**, in its own kernel RFC (RFC-0030), and this launcher is built on it; one binder serves every app
 > and re-verifies each package; and the kernel's pools are sized for 4 apps at once. Question 4 defaults to
 > `lantern-shell/launcher`.
@@ -162,6 +171,76 @@ This is unresolved question 1, and it decides how far "run an app" goes.
   - and running out of room, which is refused and says so.
 - **Mutation tests:** a binder that trusts the launcher's verification, a launcher that skips clearing a Frame (an app must
   not see another's old memory), and a kernel VSpace without the kernel mappings must each fail a case.
+
+### 9. Implementation design (2026-11-14)
+
+Settled while building it. Two scope decisions were the person's: **both apps** (`confined-probe` and
+`confined-fs-probe`, so the store joins the system image), and a **test-only hold feature** to prove several apps at
+once and "no room".
+
+**Slots.** The launcher has 4 app slots. Boot carves it one `Untyped` of 4 × 18 MiB, and the launcher carves each slot
+a child `Untyped` of 18 MiB. An app is a fresh `confined-runtime` built from that slot:
+
+- the runtime's ELF, copied into 2 MiB Frames;
+- a stack, a 2 MiB heap and a 3-megapage arena;
+- **a private copy of its package**;
+- a VSpace, a CNode, a scheduling context and a TCB.
+
+When it ends, the slot is `Reset` (RFC-0030).
+
+**The package set.** The image carries a read-only set: each signed `.lpkg` in its own 2 MiB Frame, with a small index.
+Boot maps the set into the binder and into the launcher, nowhere else. A Frame has at most two mappings, so an app gets
+a copy in a Frame from its own slot, never the set's Frame. The runtime verifies its copy, as it does today.
+
+**The shell and the launcher** share a 4 KiB Frame and talk through notification bits, so the shell still waits on its
+one notification:
+
+- **`apps`:** the shell writes the command and signals `LIST`. The launcher writes the names and justifications of the
+  packages it verified, and signals `DONE`. The shell sanitizes the text before printing it, as it does for consent.
+- **`run <name>`:** the shell writes the name and signals `RUN`. The launcher answers `STARTED(slot)` or `REFUSED(reason)`:
+  unknown, unverified, no room, or out of memory.
+- **When an app ends**, the launcher signals the shell's per-slot `ENDED` or `FAILED` bit.
+
+**The binder, registered.** The binder runs `WITH_LAUNCHER`.
+
+- It reads and verifies every package in the set itself at start, from its own mapping, and trusts nothing the launcher
+  says about them.
+- The launcher mints each slot's runtime its own badge on the binder's endpoint (`1 + slot`). Before starting that runtime,
+  it sends `REGISTER(slot, package index)` under a registration badge only it holds.
+- A `BIND` under an unregistered badge is declined. Each slot has its own bound requests, ledger entries, and grant
+  capability slots.
+- **`UNREGISTER(slot)`**, sent when the app ends, revokes each of that slot's live grants at its service and records
+  `REVOKING`. It deletes the binder's copies of the slot's capabilities and forgets the registration. Remembered decisions
+  stay: they belong to the package, not the run.
+
+**Services with many clients.**
+
+- Boot creates each service's per-slot channel Frames and maps them into the service for good: the keystore's at
+  `FRAME_VADDR + slot × 4 KiB`, and the store's likewise. Boot gives the launcher the Frame capabilities and nothing else
+  of the services'. The launcher maps a slot's channel into its app, and clears it between apps.
+- `GRANT` carries the slot in `ops`' second byte. A service ties the badge it mints to that slot's channel, and serves a
+  badge only on its own channel. So **an app can never name another app's channel**: the slot comes from the binder, which
+  learned it from the registration, never from the app.
+- The store's own channel to the keystore is a fifth, fixed keystore channel. The keystore runs a **system profile**: a
+  signing key the binder grants to apps, and a sealing key granted once to its first caller, the store, as before.
+- A client that arrives while a service is midway through another client's multi-chunk exchange is answered `BUSY`.
+  `Channel::call` now yields and retries, a bounded number of times, instead of failing. `BUSY` is only ever sent before a
+  request is processed.
+
+**An app's end.** The runtime's `SUCCESS` and `FAILURE`, and its fault notification, all go to the launcher's
+notification, under per-slot badges. The launcher then:
+
+1. sends `UNREGISTER`;
+2. tells the shell;
+3. `Reset`s the slot;
+4. clears its channels.
+
+**The hold feature.** With boot feature `launcher-hold-test`, the launcher keeps a finished app resident until all 4
+slots are full. Then console-matrix can see 4 apps' grants in `grants`, and a fifth `run` is refused for room. The normal
+image reclaims each app as it ends.
+
+**Capacity.** Measured on implementation, and stated in `lantern-kernel/src/limits.rs`. The system image runs with
+`-m 256M`.
 
 ## Threat model impact
 
