@@ -81,3 +81,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0031](./0031-interrupt-delivery-timer-and-idle.md) | Interrupt delivery, a preemption timer and an idle loop | Accepted |
 | [0032](./0032-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
 | [0033](./0033-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock | Accepted |
+| [0034](./0034-process-lifecycle-faults-and-reclamation.md) | Process lifecycle — building a process from user space, contained faults, and `Reset` | Accepted |
