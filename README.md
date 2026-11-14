@@ -102,7 +102,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0026](./rfcs/0026-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
 | [0027](./rfcs/0027-interrupt-delivery-timer-and-idle.md) | Interrupt delivery, a preemption timer and an idle loop — the kernel half of ADR-0004's item 5 | Accepted |
 | [0028](./rfcs/0028-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock — user-space timeouts on RFC-0027's timer | Accepted |
-| [0029](./rfcs/0029-a-confined-launcher.md) | A confined launcher — starting apps from signed packages after boot, at a person's request | Draft |
+| [0029](./rfcs/0029-a-confined-launcher.md) | A confined launcher — starting apps from signed packages after boot, at a person's request | Accepted |
 | [0030](./rfcs/0030-process-lifecycle-faults-and-reclamation.md) | Process lifecycle — building a process from user space, surviving its faults, and reclaiming it | Accepted |
 
 ## Index of ADRs

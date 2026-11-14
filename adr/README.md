@@ -82,3 +82,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0032](./0032-trusted-path-and-consent.md) | The trusted path and consent v0 — a person decides each grant, at a console only the shell can reach | Accepted |
 | [0033](./0033-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock | Accepted |
 | [0034](./0034-process-lifecycle-faults-and-reclamation.md) | Process lifecycle — building a process from user space, contained faults, and `Reset` | Accepted |
+| [0035](./0035-a-confined-launcher.md) | A confined launcher — apps a person starts, from signed packages, after boot | Accepted |
