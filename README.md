@@ -104,6 +104,8 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0028](./rfcs/0028-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock — user-space timeouts on RFC-0027's timer | Accepted |
 | [0029](./rfcs/0029-a-confined-launcher.md) | A confined launcher — starting apps from signed packages after boot, at a person's request | Accepted |
 | [0030](./rfcs/0030-process-lifecycle-faults-and-reclamation.md) | Process lifecycle — building a process from user space, surviving its faults, and reclaiming it | Accepted |
+| [0031](./rfcs/0031-storage-a-block-driver-and-the-store-on-disk.md) | Storage — a confined block driver, and packages and the encrypted store on a disk | Accepted |
+| [0032](./rfcs/0032-installing-a-bootable-disk.md) | Installing — a disk a machine boots from, through UEFI | Accepted |
 
 ## Index of ADRs
 
