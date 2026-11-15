@@ -58,6 +58,9 @@ done, or explicitly moved by another RFC. Any later RFC that takes on a software
 | Policy store | Unkeyed log; erasing restores revocations | A keyed log and a monotonic counter | ADR-0027 |
 | Audit log | Tamper-evident only against partial edits (RFC-0024 proposal) | Hardware-held signing and a monotonic counter | RFC-0024 |
 | Remembered decisions | An unkeyed log on flash: someone who can write it can plant an "always" | Keyed, rollback-resistant storage for a person's decisions | RFC-0026 |
+| DMA | No IOMMU on QEMU `virt`: the block driver can reach all memory | An IOMMU that confines each driver to its own buffers | RFC-0031 |
+| Store on disk | Someone who can write the disk can put back an older store image that still verifies | A monotonic counter the image is bound to | RFC-0031 |
+| Boot chain | The firmware runs whatever loader the disk holds, and the loader whatever boot image | Secure boot for the loader, and the loader verifying the image, with keys a person controls | RFC-0032 |
 | Audit retention | Retired history is erased on the device; sector headers and `RETIRED` records are unsigned, so a forged retirement verifies | Signed headers and retirements, and retired history exported to device-bound encrypted storage before it's erased | RFC-0025 |
 | Trusted publishers | Demo keys compiled in | A root of trust for what the system trusts | RFC-0020 |
 | Boot | No measured boot | Measured boot and attestation | System threat T7 |

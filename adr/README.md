@@ -83,3 +83,5 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0033](./0033-deadlines-and-a-capability-clock.md) | Deadlines and a capability-gated clock | Accepted |
 | [0034](./0034-process-lifecycle-faults-and-reclamation.md) | Process lifecycle — building a process from user space, contained faults, and `Reset` | Accepted |
 | [0035](./0035-a-confined-launcher.md) | A confined launcher — apps a person starts, from signed packages, after boot | Accepted |
+| [0036](./0036-storage-a-block-driver-and-the-store-on-disk.md) | Storage — a confined block driver, and packages and the encrypted store on a disk | Accepted |
+| [0037](./0037-installing-a-bootable-disk.md) | Installing — a disk a machine boots from, through UEFI | Accepted |
