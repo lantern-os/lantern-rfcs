@@ -109,6 +109,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0033](./rfcs/0033-provenance-for-data-at-rest.md) | Provenance for data at rest — who wrote each file, kept with the file | Accepted |
 | [0034](./rfcs/0034-local-inference-and-a-file-assistant.md) | Local inference and a file assistant | Accepted |
 | [0035](./rfcs/0035-pairwise-network-identities.md) | Pairwise network identities | Accepted |
+| [0036](./rfcs/0036-phase-3-to-phase-4-transition.md) | Closing Phase 3 and opening Phase 4 (hardware and assurance) | Accepted |
 
 ## Index of ADRs
 

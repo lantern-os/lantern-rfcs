@@ -88,3 +88,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0038](./0038-provenance-for-data-at-rest.md) | Provenance for data at rest — who wrote each file, kept with the file | Accepted |
 | [0039](./0039-local-inference-and-a-file-assistant.md) | Local inference and a file assistant — a model behind a capability, and an agent that only has what it's granted | Accepted |
 | [0040](./0040-pairwise-network-identities.md) | Pairwise network identities — an identity per context, over an encrypted channel, that no two contexts can link | Accepted |
+| [0041](./0041-phase-3-complete-phase-4-opened.md) | Phase 3 complete; Phase 4 (hardware and assurance) opened | Accepted |

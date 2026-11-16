@@ -1,7 +1,7 @@
 ---
 rfc: 0036
 title: Closing Phase 3 and opening Phase 4 (hardware and assurance)
-status: Draft
+status: Accepted
 authors: ["TheNewAutonomy"]
 stewards: ["governance", "kernel", "hal", "boot", "crypto", "filesystem", "shell", "network", "ai-runtime"]
 domains: ["governance", "kernel", "hal", "boot", "crypto", "filesystem", "shell", "network", "ai-runtime", "identity"]
@@ -14,7 +14,11 @@ tracking_issue: null
 
 # RFC-0036: Closing Phase 3 and opening Phase 4 (hardware and assurance)
 
-> **Draft. Direction agreed 2026-11-16:**
+> **Accepted 2026-11-16.** Phase 3 is closed and Phase 4 is open; [ADR-0041](../adr/0041-phase-3-complete-phase-4-opened.md)
+> is the durable record. The PRs carrying RFC-0033, RFC-0034 and RFC-0035 merged, and `main` was verified from fresh
+> clones the same day.
+>
+> **Direction agreed 2026-11-16:**
 > - Close Phase 3 now, with the narrow points stated.
 > - Formal verification moves to the head of Phase 4.
 > - Minimum hardware has two tiers: to run, and to exit Phase 4.
