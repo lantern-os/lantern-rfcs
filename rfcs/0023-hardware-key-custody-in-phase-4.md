@@ -66,6 +66,9 @@ done, or explicitly moved by another RFC. Any later RFC that takes on a software
 | Boot | No measured boot | Measured boot and attestation | System threat T7 |
 | Driver isolation | Flash only, because there's no IOMMU | IOMMU-confined drivers, so DMA devices can be confined | ADR-0027 |
 | Minimum hardware | Open question | A decision on what's required | `lantern-boot/STATUS.md` |
+| Wallet root | The wallet's root, every pairwise identity's secret, is sealed under a demo keystore key on the disk: whoever has the disk has every identity | The root in hardware, never leaving it; recovery that isn't a backdoor | RFC-0035 |
+| Entropy | Randomness comes from QEMU's virtio-rng, which the host controls | A hardware generator the system trusts, behind the same protocol | RFC-0035 |
+| Model integrity | The inference service accepts the model whose digest is compiled into the boot image, which nothing verifies, so whoever can rewrite the disk can replace both | Models as signed packages, checked under a root of trust, inside a verified boot chain | RFC-0034 |
 
 ## Threat model impact
 
