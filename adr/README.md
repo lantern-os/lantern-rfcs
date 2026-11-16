@@ -85,3 +85,6 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0035](./0035-a-confined-launcher.md) | A confined launcher — apps a person starts, from signed packages, after boot | Accepted |
 | [0036](./0036-storage-a-block-driver-and-the-store-on-disk.md) | Storage — a confined block driver, and packages and the encrypted store on a disk | Accepted |
 | [0037](./0037-installing-a-bootable-disk.md) | Installing — a disk a machine boots from, through UEFI | Accepted |
+| [0038](./0038-provenance-for-data-at-rest.md) | Provenance for data at rest — who wrote each file, kept with the file | Accepted |
+| [0039](./0039-local-inference-and-a-file-assistant.md) | Local inference and a file assistant — a model behind a capability, and an agent that only has what it's granted | Accepted |
+| [0040](./0040-pairwise-network-identities.md) | Pairwise network identities — an identity per context, over an encrypted channel, that no two contexts can link | Accepted |

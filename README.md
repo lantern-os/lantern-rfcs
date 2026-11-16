@@ -106,6 +106,9 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0030](./rfcs/0030-process-lifecycle-faults-and-reclamation.md) | Process lifecycle — building a process from user space, surviving its faults, and reclaiming it | Accepted |
 | [0031](./rfcs/0031-storage-a-block-driver-and-the-store-on-disk.md) | Storage — a confined block driver, and packages and the encrypted store on a disk | Accepted |
 | [0032](./rfcs/0032-installing-a-bootable-disk.md) | Installing — a disk a machine boots from, through UEFI | Accepted |
+| [0033](./rfcs/0033-provenance-for-data-at-rest.md) | Provenance for data at rest — who wrote each file, kept with the file | Accepted |
+| [0034](./rfcs/0034-local-inference-and-a-file-assistant.md) | Local inference and a file assistant | Accepted |
+| [0035](./rfcs/0035-pairwise-network-identities.md) | Pairwise network identities | Accepted |
 
 ## Index of ADRs
 
