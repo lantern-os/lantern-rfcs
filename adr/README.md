@@ -89,3 +89,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0039](./0039-local-inference-and-a-file-assistant.md) | Local inference and a file assistant — a model behind a capability, and an agent that only has what it's granted | Accepted |
 | [0040](./0040-pairwise-network-identities.md) | Pairwise network identities — an identity per context, over an encrypted channel, that no two contexts can link | Accepted |
 | [0041](./0041-phase-3-complete-phase-4-opened.md) | Phase 3 complete; Phase 4 (hardware and assurance) opened | Accepted |
+| [0042](./0042-kani-proofs-of-the-kernel.md) | Kani proofs of the kernel's capability and IPC paths, within stated bounds | Accepted |

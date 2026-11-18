@@ -110,6 +110,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0034](./rfcs/0034-local-inference-and-a-file-assistant.md) | Local inference and a file assistant | Accepted |
 | [0035](./rfcs/0035-pairwise-network-identities.md) | Pairwise network identities | Accepted |
 | [0036](./rfcs/0036-phase-3-to-phase-4-transition.md) | Closing Phase 3 and opening Phase 4 (hardware and assurance) | Accepted |
+| [0037](./rfcs/0037-formal-verification-first-properties.md) | Formal verification — the tool, and the first properties of the capability and IPC paths | Accepted |
 
 ## Index of ADRs
 
