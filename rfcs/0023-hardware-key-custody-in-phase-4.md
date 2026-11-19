@@ -61,14 +61,14 @@ done, or explicitly moved by another RFC. Any later RFC that takes on a software
 | DMA | No IOMMU on QEMU `virt`: the block driver can reach all memory | An IOMMU that confines each driver to its own buffers | RFC-0031 |
 | Store on disk | Someone who can write the disk can put back an older store image that still verifies | A monotonic counter the image is bound to | RFC-0031 |
 | Boot chain | The firmware runs whatever loader the disk holds, and the loader whatever boot image | Secure boot for the loader, and the loader verifying the image, with keys a person controls | RFC-0032 |
-| Audit retention | Retired history is erased on the device; sector headers and `RETIRED` records are unsigned, so a forged retirement verifies | Signed headers and retirements, and retired history exported to device-bound encrypted storage before it's erased | RFC-0025 |
+| Audit retention | Retired history is exported first, sealed, to the disk's archive (RFC-0038), and any loss is recorded; sector headers, `RETIRED` and `EXPORTED` records, and the archive are unsigned, so someone with the disk can forge or roll them back | Signed headers, retirements and exports, and the archive bound to the device | RFC-0025, RFC-0038 |
 | Trusted publishers | Demo keys compiled in | A root of trust for what the system trusts | RFC-0020 |
 | Boot | No measured boot | Measured boot and attestation | System threat T7 |
 | Driver isolation | Flash only, because there's no IOMMU | IOMMU-confined drivers, so DMA devices can be confined | ADR-0027 |
 | Minimum hardware | Open question | A decision on what's required | `lantern-boot/STATUS.md` |
 | Wallet root | The wallet's root, every pairwise identity's secret, is sealed under a demo keystore key on the disk: whoever has the disk has every identity | The root in hardware, never leaving it; recovery that isn't a backdoor | RFC-0035 |
 | Entropy | Randomness comes from QEMU's virtio-rng, which the host controls | A hardware generator the system trusts, behind the same protocol | RFC-0035 |
-| Model integrity | The inference service accepts the model whose digest is compiled into the boot image, which nothing verifies, so whoever can rewrite the disk can replace both | Models as signed packages, checked under a root of trust, inside a verified boot chain | RFC-0034 |
+| Model integrity | Models are signed packages (RFC-0038), checked against the publisher keys compiled into the boot image, which nothing verifies, so whoever can rewrite the disk can replace both | The publisher keys under a root of trust, inside a verified boot chain | RFC-0034, RFC-0038 |
 
 ## Threat model impact
 

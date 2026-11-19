@@ -90,3 +90,4 @@ What becomes easier, what becomes harder, what we are now committed to.
 | [0040](./0040-pairwise-network-identities.md) | Pairwise network identities — an identity per context, over an encrypted channel, that no two contexts can link | Accepted |
 | [0041](./0041-phase-3-complete-phase-4-opened.md) | Phase 3 complete; Phase 4 (hardware and assurance) opened | Accepted |
 | [0042](./0042-kani-proofs-of-the-kernel.md) | Kani proofs of the kernel's capability and IPC paths, within stated bounds | Accepted |
+| [0043](./0043-signed-models-and-kept-audit-history.md) | Signed model packages, and audit history kept in a sealed archive before it's retired | Accepted |
