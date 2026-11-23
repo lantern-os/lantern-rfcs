@@ -112,6 +112,7 @@ Bug fixes, docs, tests, and interface-preserving refactors do **not** need an RF
 | [0036](./rfcs/0036-phase-3-to-phase-4-transition.md) | Closing Phase 3 and opening Phase 4 (hardware and assurance) | Accepted |
 | [0037](./rfcs/0037-formal-verification-first-properties.md) | Formal verification — the tool, and the first properties of the capability and IPC paths | Accepted |
 | [0038](./rfcs/0038-signed-models-and-kept-audit-history.md) | Signed model packages, and audit history kept before it's retired | Accepted |
+| [0039](./rfcs/0039-bring-up-on-the-k3-pico-itx.md) | Bring-up on the Banana Pi K3 Pico-ITX | Draft |
 
 ## Index of ADRs
 
